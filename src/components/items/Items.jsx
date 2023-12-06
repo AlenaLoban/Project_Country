@@ -1,20 +1,45 @@
 import Item from "./Item";
-import  { useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import { fetchContries } from '../../redux/countrySlice';
 import SKeleton from "../Skeleton";
+import { useGetCountriesQuery } from "../../redux/countriesApi";
+import { useContext, useEffect, useState } from "react";
+import { SearchContext, SortContext } from "../../Context";
 
+const Items = () => {
+  const { data = [], isLoading, isError } = useGetCountriesQuery();
+  const [selectedOption] = useContext(SortContext);
+  const [searchValue] = useContext(SearchContext);
+  const [filteredCountry, setFilteredCountry] = useState(data);
 
-const Items = ( ) => {
-   const dispatch = useDispatch();
-   useEffect(()=>{dispatch(fetchContries())},[dispatch])
-   const {isLoading, error, choiseCountries} = useSelector(state => state.country)
-   
-   return(
-      <div className="container items">
-         {isLoading ? <SKeleton/> : choiseCountries.map((item) => <Item key={item.name.common} item={item}/>)}
-         {error && <h2>Error: {error}</h2> }
-      </div>
-   )
-}
-export default Items
+  const setFilter = () => {
+    let countries = [...data];
+    const regionValue = selectedOption?.value || "";
+    if (regionValue) {
+      countries = countries.filter((country) =>
+        country.region.includes(regionValue)
+      );
+    }
+    if (searchValue) {
+      countries = countries.filter((country) =>
+        country.name.common.toLowerCase().includes(searchValue.toLowerCase())
+      );
+    }
+    setFilteredCountry(countries);
+  };
+  useEffect(() => {
+    setFilter();
+  }, [searchValue, selectedOption]);
+
+  return (
+    <div className="container items">
+      {isLoading ? (
+        <SKeleton />
+      ) : (
+        filteredCountry.map((item) => (
+          <Item key={item.name.common} item={item} />
+        ))
+      )}
+      {isError && <h2>Error server</h2>}
+    </div>
+  );
+};
+export default Items;

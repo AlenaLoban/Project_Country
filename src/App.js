@@ -1,27 +1,12 @@
-import React from 'react';
-import './App.css'
-import { Route, Routes} from 'react-router-dom';
-import Home from './pages/Home';
-import AboutUs from './pages/AboutUs';
-import Catalog from './pages/Catalog';
-import Detailes from './pages/Detailes';
-import Layout from './components/Layout';
+import React from "react";
+import "./App.css";
+import Routing from "./Routing";
 
 const App = () => {
-   return(
-      <div className='wrapper'>
-         <Routes>
-            <Route path='/' element={<Layout/>}>
-               <Route index element={<Home/>}/>
-               <Route path='about' element={<AboutUs/>}/>
-               <Route path='catalog' element={<Catalog/>}/>
-               <Route path='catalog/:name' element={<Detailes/>}/>
-
-            </Route>
-         </Routes>
-      </div>
-
-
-   )
-}
-export default App
+  return (
+    <div className="wrapper">
+      <Routing />
+    </div>
+  );
+};
+export default App;

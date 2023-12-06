@@ -65,7 +65,7 @@ header {
   display: flex;
 }
 .header li {
-  padding-right: 20px;
+  margin-right: 20px;
   position: relative;
   letter-spacing: 0.1rem;
 }
@@ -310,12 +310,13 @@ header {
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
 }
 .country__info p {
   margin-bottom: 10px;
 }
-.country__info--one, .country__info--two {
+.country__info--one,
+.country__info--two {
   flex: 0 1 50%;
 }
 .country__border {
@@ -340,4 +341,4 @@ header {
 }
 .country__border li:hover {
   box-shadow: 5px 5px 30px 5px #c9c6c6;
-}/*# sourceMappingURL=App.css.map */
+} /*# sourceMappingURL=App.css.map */
