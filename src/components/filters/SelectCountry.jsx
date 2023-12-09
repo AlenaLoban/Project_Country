@@ -1,6 +1,7 @@
 import Select from "react-select";
 import { useContext } from "react";
-import { SortContext } from "../../Context";
+import { SortContext } from "../../core/Context";
+import styles from "./css/Filter.module.css";
 
 const options = [
   { value: "Africa", label: "Africa" },

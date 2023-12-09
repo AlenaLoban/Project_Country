@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
 import HeaderCountry from "./header/HeaderCountry";
+import "../core/css/App.css";
 
 const Layout = () => {
   return (
     <>
       <HeaderCountry />
-      <main>
+      <main className="container">
         <Outlet />
       </main>
     </>

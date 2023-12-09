@@ -1,4 +1,3 @@
-import "../../App.css";
 import { NavLink } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
@@ -10,9 +9,14 @@ const HeaderCountry = () => {
 
   return (
     <header>
-      <div className="container ">
-        <div className="header">
-          <p>WIW</p>
+      <div className="container">
+        <div className="header ">
+          <div
+            className="header__logo"
+            style={{
+              backgroundImage: `url('logo.jpg')`,
+            }}
+          ></div>
           <nav>
             <ul
               onClick={() => setBurger(!burger)}
@@ -25,11 +29,7 @@ const HeaderCountry = () => {
                   Home
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/about" className={setActive}>
-                  About Us
-                </NavLink>
-              </li>
+              <li>About Us</li>
               <li>
                 <NavLink to="/catalog" className={setActive}>
                   Catalog
