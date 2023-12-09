@@ -41,16 +41,6 @@ const Countries = () => {
 
   return (
     <div className={styles.items}>
-      <div className={styles.items__body}>
-        {currentItems.map((item) =>
-          isLoading ? (
-            <SKeleton />
-          ) : (
-            <Country key={item.name.common} item={item} />
-          )
-        )}
-        {isError && <h2>Error server</h2>}
-      </div>
       <ReactPaginate
         breakLabel="..."
         nextLabel=">"
@@ -65,6 +55,16 @@ const Countries = () => {
         nextLinkClassName={styles.page_num}
         activeLinkClassName={styles.active}
       />
+      <div className={styles.items__body}>
+        {currentItems.map((item) =>
+          isLoading ? (
+            <SKeleton />
+          ) : (
+            <Country key={item.name.common} item={item} />
+          )
+        )}
+        {isError && <h2>Error server</h2>}
+      </div>
     </div>
   );
 };

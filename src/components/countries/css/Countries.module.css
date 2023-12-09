@@ -50,13 +50,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding: 10px 0 30px 0;
   font-size: 16px;
   gap: 5px;
   cursor: pointer;
 }
 .pagination .active {
-  background-color: rgba(3, 27, 3, 0.993);
+  background-color: rgba(3, 27, 3, 0.596);
   color: white;
 }
 
@@ -65,6 +65,16 @@
   border-radius: 3px;
 }
 .page_num:hover {
-  background-color: rgba(3, 27, 3, 0.993);
+  background-color: rgba(3, 27, 3, 0.678);
   color: white;
+}
+
+@media (max-width: 580px) {
+  .pagination {
+    font-size: 14px;
+    gap: 2px;
+  }
+  .page_num {
+    padding: 5px 12px;
+  }
 }/*# sourceMappingURL=Countries.module.css.map */
