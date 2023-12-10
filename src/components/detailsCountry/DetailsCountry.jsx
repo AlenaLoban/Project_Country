@@ -86,7 +86,7 @@ const DetailsCountry = ({ country }) => {
                       {data.map((item) => (
                         <Link
                           key={item.name.common}
-                          to={`/catalog/${item.name.common}`}
+                          to={`/countries/${item.name.common}`}
                         >
                           <li>{item.name.common}</li>
                         </Link>

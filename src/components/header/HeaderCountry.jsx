@@ -31,8 +31,8 @@ const HeaderCountry = () => {
               </li>
               <li>About Us</li>
               <li>
-                <NavLink to="/catalog" className={setActive}>
-                  Catalog
+                <NavLink to="/countries" className={setActive}>
+                  Countries
                 </NavLink>
               </li>
             </ul>

@@ -18,7 +18,7 @@ const Home = () => {
           Lorem ipsum dolor sit amet consectetur quo adipisicing elit. Dolor,
           quo eligendi?{" "}
         </div>
-        <Link to="/catalog">
+        <Link to="/countries">
           {" "}
           <p className="info__link">Read more</p>{" "}
         </Link>

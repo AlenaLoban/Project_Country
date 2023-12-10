@@ -4,7 +4,7 @@ import styles from "./css/Countries.module.css";
 
 const Country = ({ item }) => {
   return (
-    <Link to={`/catalog/${item.name.official}`}>
+    <Link to={`/countries/${item.name.official}`}>
       <div className={styles.card}>
         <div
           className={styles.card__img}
@@ -23,9 +23,7 @@ const Country = ({ item }) => {
           <p>
             <span>Capital:</span> {item.capital}
           </p>
-          <Link to={`/catalog/${item.name.official}`}>
             <RiMoreLine size={20} color="green" />
-          </Link>
         </div>
       </div>
     </Link>
