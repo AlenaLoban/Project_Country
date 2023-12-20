@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import DetailsCountry from "../../components/detailsCountry/DetailsCountry";
-import { useGetCountryQuery } from "../../core/store/countriesApi";
+import DetailsCountry from "../features/country/components/detailsCountry/DetailsCountry";
+import { useGetCountryQuery } from "../features/country/countryApi";
 
 const Detailes = () => {
   const { name } = useParams();

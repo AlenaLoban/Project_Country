@@ -1,7 +1,5 @@
 import Select from "react-select";
-import { useContext } from "react";
-import { SortContext } from "../../core/Context";
-import styles from "./css/Filter.module.css";
+import { useCountriesContext } from "../../Context";
 
 const options = [
   { value: "Africa", label: "Africa" },
@@ -12,7 +10,7 @@ const options = [
 ];
 
 const SelectCountry = () => {
-  const [selectedOption, setSelectedOption] = useContext(SortContext);
+  const { selectedOption, setSelectedOption } = useCountriesContext();
   return (
     <Select
       className="react-select-container"

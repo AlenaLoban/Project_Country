@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import HeaderCountry from "./header/HeaderCountry";
-import "../core/css/App.css";
+import HeaderCountry from "../../features/header/HeaderCountry";
+import "../css/App.css"
 
 const Layout = () => {
   return (

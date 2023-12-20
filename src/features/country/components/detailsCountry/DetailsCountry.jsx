@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { useGetBorderCountriesQuery } from "../../core/store/countriesApi";
+import { useGetBorderCountriesQuery } from "../../countryApi";
 import styles from "./css/Detail.module.css";
 
 const DetailsCountry = ({ country }) => {
@@ -80,7 +80,7 @@ const DetailsCountry = ({ country }) => {
                   {isLoading && <h2>Loading..</h2>}
 
                   {!borders ? (
-                    <h3>There are not border contries</h3>
+                    <h3>There are not border countries</h3>
                   ) : (
                     <ul>
                       {data.map((item) => (

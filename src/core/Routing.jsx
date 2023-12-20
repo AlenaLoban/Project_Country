@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../core/pages/Home";
-import Catalog from "../core/pages/Catalog";
-import Detailes from "../core/pages/Detailes";
-import Layout from "./Layout";
+import Home from "../pages/Home";
+import Catalog from "../pages/Catalog";
+import Detailes from "../pages/Detailes";
+import Layout from "./layout";
 const Routing = () => {
   return (
     <Routes>

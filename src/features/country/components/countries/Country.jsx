@@ -23,7 +23,7 @@ const Country = ({ item }) => {
           <p>
             <span>Capital:</span> {item.capital}
           </p>
-            <RiMoreLine size={20} color="green" />
+          <RiMoreLine size={20} color="green" />
         </div>
       </div>
     </Link>

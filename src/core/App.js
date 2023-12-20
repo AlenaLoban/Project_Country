@@ -1,6 +1,5 @@
 import React from "react";
-import "./css/App.css";
-import Routing from "../components/Routing";
+import Routing from "./Routing";
 
 const App = () => {
   return (

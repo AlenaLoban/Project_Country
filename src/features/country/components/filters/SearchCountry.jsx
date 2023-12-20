@@ -1,10 +1,9 @@
 import { MdOutlineSearch } from "react-icons/md";
-import { useContext } from "react";
-import { SearchContext } from "../../core/Context";
+import { useCountriesContext } from "../../Context";
 import styles from "./css/Filter.module.css";
 
 const SearchCountry = () => {
-  const [searchValue, setSearchValue] = useContext(SearchContext);
+  const { searchValue, setSearchValue } = useCountriesContext();
 
   return (
     <div className={styles.search}>

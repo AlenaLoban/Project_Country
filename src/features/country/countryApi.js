@@ -1,8 +1,5 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
-export const countriesApi = createApi({
-  reducerPath: "countriesApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://restcountries.com/v3.1/" }),
+import { baseApi } from "../../core/store/api";
+export const countriesApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getCountries: builder.query({
       query: () => `all?fields=name,capital,flags,population,region`,
@@ -14,6 +11,7 @@ export const countriesApi = createApi({
       query: (borders) => `alpha?codes=${borders}`,
     }),
   }),
+  overrideExisting: false,
 });
 
 export const {
