@@ -30,9 +30,10 @@ header {
   height: 80px;
   font-size: 24px;
   color: white;
+
   a {
-   color: white;
- }
+    color: white;
+  }
 }
 .active-link {
   color: rgb(217, 247, 230);
@@ -84,7 +85,6 @@ header {
   li:hover:before {
     transform: scale(1, 1);
   }
-
 }
 
 @media (max-width: 800px) {
@@ -121,7 +121,6 @@ header {
       &:before {
         border-bottom: 2px solid white;
       }
-
     }
   }
 }
@@ -236,6 +235,7 @@ header {
   div {
     padding-bottom: 15px;
     align-items: center;
+    transition: all 0.5s ease 0.3s;
   }
   &__link {
     letter-spacing: 0.2rem;
@@ -247,6 +247,7 @@ header {
     &:hover {
       color: white;
       background-color: rgba(6, 80, 37, 0.863);
+      transform: translateY(-9px);
     }
   }
 }

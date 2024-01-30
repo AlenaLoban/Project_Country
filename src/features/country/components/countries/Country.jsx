@@ -12,18 +12,21 @@ const Country = ({ item }) => {
             backgroundImage: `url('${item.flags.svg}')`,
           }}
         ></div>
-        <h3>{item.name.common}</h3>
+
         <div className={styles.card__info}>
-          <p>
-            <span>Population:</span> {item.population}
-          </p>
-          <p>
-            <span>Region:</span> {item.region}
-          </p>
-          <p>
-            <span>Capital:</span> {item.capital}
-          </p>
-          <RiMoreLine size={20} color="green" />
+          <h3>{item.name.common}</h3>
+          <div>
+            <p>
+              <span>Population:</span> {item.population}
+            </p>
+            <p>
+              <span>Region:</span> {item.region}
+            </p>
+            <p>
+              <span>Capital:</span> {item.capital}
+            </p>
+            <RiMoreLine size={20} color="green" />
+          </div>
         </div>
       </div>
     </Link>

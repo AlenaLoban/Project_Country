@@ -7,7 +7,7 @@
   row-gap: 15px;
   display: grid;
   grid-auto-flow: row;
-  grid-template: auto 1fr auto/1fr;
+  grid-template: repeat(2, 1fr)/1fr;
   overflow: hidden;
   color: rgba(3, 27, 3, 0.993);
 }
@@ -22,6 +22,14 @@
 }
 .card__body {
   padding: 30px;
+}
+.card__info {
+  display: flex;
+  flex-direction: column;
+}
+.card__info h3 {
+  flex: 1 1 auto;
+  padding-top: 10px;
 }
 .card__info p {
   padding-bottom: 4px;
@@ -77,4 +85,4 @@
   .page_num {
     padding: 5px 12px;
   }
-}/*# sourceMappingURL=Countries.module.css.map */
+}

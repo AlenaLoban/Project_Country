@@ -230,6 +230,7 @@ header a {
 .info div {
   padding-bottom: 15px;
   align-items: center;
+  transition: all 0.5s ease 0.3s;
 }
 .info__link {
   letter-spacing: 0.2rem;
@@ -242,6 +243,7 @@ header a {
 .info__link:hover {
   color: white;
   background-color: rgba(6, 80, 37, 0.863);
+  transform: translateY(-9px);
 }
 
 @media (min-width: 1400px) {
@@ -284,4 +286,4 @@ header a {
 }
 .catalog {
   padding: 20px 10px;
-}/*# sourceMappingURL=App.css.map */
+}

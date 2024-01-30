@@ -3,7 +3,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 
-const HeaderCountry = () => {
+const Header = () => {
   const setActive = ({ isActive }) => (isActive ? "active-link" : "");
   const [burger, setBurger] = useState(false);
 
@@ -49,4 +49,4 @@ const HeaderCountry = () => {
     </header>
   );
 };
-export default HeaderCountry;
+export default Header;

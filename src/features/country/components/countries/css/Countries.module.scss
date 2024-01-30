@@ -7,7 +7,7 @@
   row-gap: 15px;
   display: grid;
   grid-auto-flow: row;
-  grid-template: auto 1fr auto / 1fr;
+  grid-template: repeat(2, 1fr) / 1fr;
   overflow: hidden;
   color: rgba(3, 27, 3, 0.993);
 
@@ -25,6 +25,13 @@
     padding: 30px;
   }
   &__info {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      flex: 1 1 auto;
+      padding-top: 10px;
+    }
+
     p {
       padding-bottom: 4px;
       &:last-child {
@@ -55,6 +62,7 @@
   font-size: 16px;
   gap: 5px;
   cursor: pointer;
+
   .active {
     background-color: rgba(3, 27, 3, 0.596);
     color: white;
